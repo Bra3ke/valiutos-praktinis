@@ -8,8 +8,8 @@ int main() {
                           "USD - JAV doleris",
                           "INR - Indijos rupija"};
     string trumpiniai[3] = {"GBP", "USD", "INR"};
-    double kursaiPirkti[3] = {0.86, 1.1460, 101.3862};     // iš euro
-    double kursaiParduoti[3] = {1/0.9220, 1.2340, 107.8546}; // į eurą
+    double kursaiPirkti[3] = {0.86, 1.1460, 101.3862};     // is euro
+    double kursaiParduoti[3] = {1/0.9220, 1.2340, 107.8546}; // i eurą
 
     int pasirinkimas, valiuta;
     double kiekis, rezultatas;
