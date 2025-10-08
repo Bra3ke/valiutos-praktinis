@@ -87,7 +87,7 @@ int main() {
             }
         }
         else {
-            cout << "Tokios funkcijos nera! Bandykite dar karta.\n";
+            cout << "Tokios funkcijos nera! Bandykite dar karta:0\n";
         }
     }
 
