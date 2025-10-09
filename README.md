@@ -1,3 +1,4 @@
+
 //urte brazenaite
 
 #include <iostream>
@@ -15,12 +16,11 @@ int main() {
     double kursaiPirkti[4] = {1.0, 0.86, 1.1460, 101.3862};
     double kursaiParduoti[4] = {1.0, 1/0.9220, 1.2340, 107.8546};
 
-    int pasirinkimas, valiuta;
+ int pasirinkimas, valiuta;
     double kiekis, rezultatas;
     bool veikia = true;
 
-    cout << fixed << setprecision(2);
-
+cout << fixed << setprecision(2);
     while (veikia) {
         cout << "\nPasirinkite funkcija:\n";
         cout << "1 - Valiutos kurso palyginimas\n";
@@ -30,8 +30,8 @@ int main() {
         cout << "Pasirinkimas: ";
         cin >> pasirinkimas;
 
-        if (pasirinkimas == 0) {
-            cout << "Aciu, viso gero!\n";
+ if (pasirinkimas == 0) {
+            cout << "Aciu, viso gero!\n";           
             veikia = false;
         }
         else if (pasirinkimas == 1) {
@@ -41,13 +41,13 @@ int main() {
                  << setw(15) << "Pardavimo kursas" << endl;
             cout << string(70, '-') << endl;
 
-            for (int i = 0; i < 4; i++) {
+for (int i = 0; i < 4; i++) {
                 cout << left << setw(40) << valiutos[i]
                      << setw(15) << kursaiPirkti[i]
                      << setw(15) << kursaiParduoti[i] << endl;
             }
 
-            cout << "\nPaspauskite bet kuri migtuka, kad gristumet atgal...\n";
+cout << "\nPaspauskite bet kuri migtuka, kad gristumet atgal...\n";
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin.get();
         }
@@ -60,19 +60,17 @@ int main() {
                 cout << "Pasirinkimas: ";
                 cin >> valiuta;
 
-                if (valiuta == 0) {
+if (valiuta == 0) {
                     cout << "Griztama i atgal...\n";
                     break;
                 }
 
-                if (valiuta < 1 || valiuta > 4) {
+ if (valiuta < 1 || valiuta > 4) {
                     cout << "Neteisingas pasirinkimas! Bandykite dar karta:0\n";
                     continue;
                 }
-
                 cout << "Iveskite kieki: ";
                 cin >> kiekis;
-
                 if (pasirinkimas == 2) { // pirkti
                     rezultatas = kiekis * kursaiPirkti[valiuta - 1];
                     cout << kiekis << " EUR = " << rezultatas << " "
@@ -82,7 +80,6 @@ int main() {
                     cout << kiekis << " " << trumpiniai[valiuta - 1]
                          << " = " << rezultatas << " EUR" << endl;
                 }
-
                 cout << "\nAr norite testi sia funkcija? (1 - taip, 0 - grizti atgal ): ";
                 int testi;
                 cin >> testi;
